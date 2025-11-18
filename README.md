@@ -39,9 +39,7 @@ Built with **Streamlit**, **GeoPandas**, **Pydeck**, and **Plotly**, this app al
 ### 4. Install dependencies  
     pip install -r requirements.txt
 
-### 5. Unpack the .zip data into a folder named "Daten"
-
-### 6. Run the application  
+### 5. Run the application  
     streamlit run streamlit_app.py
 
 The app will open at:  
