@@ -23,7 +23,7 @@ Built with **Streamlit**, **GeoPandas**, **Pydeck**, and **Plotly**, this app al
 ## 📦 Installation
 
 ### 1. Clone the repository  
-    git clone <your-repo-url>  
+    git clone <https://github.com/LeonidWouters/streamlit_dashboard_zurich_accidents.git>  
     cd <your-repo-folder>
 
 ### 2. Create a virtual environment  
