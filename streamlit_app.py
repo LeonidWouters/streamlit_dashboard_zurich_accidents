@@ -7,7 +7,7 @@ import pydeck as pdk
 import zipfile, os
 
 zip_path = "Daten/unfaelle.zip"
-extract_path = "Daten/unfaelle"
+extract_path = "Unpacked_Data"
 
 if not os.path.exists(extract_path):
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
