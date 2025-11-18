@@ -3,6 +3,9 @@
 An interactive web application for visualizing and analyzing geospatial data of the city of Zurich.  
 Built with **Streamlit**, **GeoPandas**, **Pydeck**, and **Plotly**, this app allows loading, visualizing, and exploring GeoJSON datasets including roads, accidents, rivers, lakes, and canton boundaries.
 
+**Visit the interactive dashboard here:**
+**https://zurichaccidents.streamlit.app/**
+
 ---
 
 ## 🚀 Features
