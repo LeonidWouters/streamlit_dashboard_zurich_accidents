@@ -4,7 +4,16 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import pydeck as pdk
-import time
+import zipfile, os
+
+zip_path = "Daten/unfaelle.zip"
+extract_path = "Daten/unfaelle"
+
+if not os.path.exists(extract_path):
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(extract_path)
+
+data_path = os.path.join(extract_path, "unfaelle_zuerich_2023_temporegime_beleuchtung_zebrastreifen.json")
 
 # App immer im Wide-Modus anzeigen
 st.set_page_config(layout="wide")
@@ -138,7 +147,6 @@ elif page == "📊 Dashboard":
     @st.cache_data
     def load_data():
         # You might need to adjust this data path to be relative or accessible by the app
-        data_path = r"Daten\unfaelle_zuerich_2023_temporegime_beleuchtung_zebrastreifen.json"
         try:
             data = gpd.read_file(data_path)
             return data
