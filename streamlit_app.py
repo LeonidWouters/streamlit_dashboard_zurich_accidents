@@ -7,7 +7,7 @@ import pydeck as pdk
 import zipfile, os
 
 zip_path = "Daten/unfaelle.zip"
-extract_path = "Unpacked_Data"
+extract_path = "Daten/unfaelle"
 
 if not os.path.exists(extract_path):
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
@@ -147,6 +147,7 @@ elif page == "📊 Dashboard":
     @st.cache_data
     def load_data():
         # You might need to adjust this data path to be relative or accessible by the app
+        data_path = r"unfaelle_zuerich_2023_temporegime_beleuchtung_zebrastreifen.json"
         try:
             data = gpd.read_file(data_path)
             return data
