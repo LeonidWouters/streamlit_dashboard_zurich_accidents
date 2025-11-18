@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 # You might need to adjust this image path to be relative or accessible by the app
 try:
     st.image(
-        r"C:\Users\leoni\Documents\HSLU\5. Semester\Informationsvisualisierung\Einzelprojekt\informationsvisualisierung-leonid-wouters\Banner_Stadt_Zürich.png",
+        r"Banner_Stadt_Zürich.png",
         use_container_width=True)
 except FileNotFoundError:
     st.warning("Banner image not found. Please check the file path.")
@@ -138,7 +138,7 @@ elif page == "📊 Dashboard":
     @st.cache_data
     def load_data():
         # You might need to adjust this data path to be relative or accessible by the app
-        data_path = r"C:\Users\leoni\Documents\HSLU\5. Semester\Informationsvisualisierung\Einzelprojekt\informationsvisualisierung-leonid-wouters\Daten\unfaelle_zuerich_2023_temporegime_beleuchtung_zebrastreifen.json"
+        data_path = r"Daten\unfaelle_zuerich_2023_temporegime_beleuchtung_zebrastreifen.json"
         try:
             data = gpd.read_file(data_path)
             return data
